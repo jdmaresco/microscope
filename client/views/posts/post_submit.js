@@ -8,11 +8,12 @@ Template.postSubmit.events({
       message: $(e.target).find('[name=message]').val()
     }
 
-    Method.call('post', post, function(error, id) {
+    Meteor.call('post', post, function(error, id) {
       if (error)
         return alert(error.reason);
 
         Router.go('postPage', {_id: id});
     });
+
   }
 });

@@ -28,4 +28,4 @@ Meteor.methods({
 
     return postId;
   }
-});
+})
