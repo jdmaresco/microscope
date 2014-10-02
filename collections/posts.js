@@ -20,7 +20,7 @@ Meteor.methods({
     // pick out whitelisted keys
     var post = _.extend(_.pick(postAttributes, 'url', 'title', 'message'), {
       userId: user._id,
-      author: user.username,
+      author: user.emails[0].address,
       submitted: new Date().getTime()
     });
 
